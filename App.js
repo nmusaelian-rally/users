@@ -3,10 +3,6 @@ Ext.define('CustomApp', {
     componentCls: 'app',
     items:{ html:'<a href="https://help.rallydev.com/apps/2.0rc2/doc/">App SDK 2.0rc2 Docs</a>'},
     launch: function() {
-         //var context = this.getContext();
-         //Display the current workspace name
-        //this._displayContextValue('Workspace: ' + context.getWorkspace().Name);
-        
         Ext.create('Rally.data.wsapi.Store', {
                         model: 'user',
                         autoLoad: true,
@@ -21,7 +17,6 @@ Ext.define('CustomApp', {
                     });
         
     },
-    
      _onDataLoaded: function(store, data) {
         var info = [];
         var context = this.getContext();
